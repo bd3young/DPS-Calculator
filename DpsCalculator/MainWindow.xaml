@@ -1,0 +1,219 @@
+﻿<Window x:Class="DPSCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DPSCalculator"
+        mc:Ignorable="d"
+        Title=""
+        Background="Green"
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Content="DPS Calculator"
+            FontSize="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="241"
+            Height="50"
+            />
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <RadioButton
+                x:Name="RadioButton_Second"
+                Content="Second"
+                Margin="5"
+                FontSize="20"
+                IsChecked="True"
+                Checked="RadioButton_Time_Checked"/>
+            <RadioButton
+                x:Name="RadioButton_Minute"
+                Content="Minute"
+                Margin="5"
+                FontSize="20"
+                IsChecked="False"
+                Checked="RadioButton_Time_Checked"/>
+
+        </StackPanel>
+        <Grid
+            Grid.Row="1"
+            Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Reload Time"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Height="40"
+                Width="145"
+                Padding="0,0,10,0"/>
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Rounds In Magazine"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Height="40"
+                Width="232"
+                Padding="0,0,10,0"/>
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Bullets Per Second"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Height="40"
+                Width="215"
+                Padding="0,0,10,0"/>
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="Damage Per Bullet"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Height="40"
+                Width="215"
+                Padding="0,0,10,0"/>
+            <Button
+                x:Name="Calculate_Button"
+                Grid.Column="1"
+                Grid.Row="4"
+                Height="50"
+                Width="200"
+                Content="Calculate"
+                FontSize="30"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center" Click="Calculate_Button_Click"/>
+            <Label
+                x:Name="Label_Dps"
+                Grid.Row="5"
+                Height="40"
+                Width="230"
+                Content="Damage Per Second"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Padding="0,0,10,0"/>
+            <ComboBox
+                x:Name="ComboBox_GunType"
+                Grid.Row="4"
+                Grid.Column="0"
+                Height="35"
+                Width="150"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center">
+                <ComboBoxItem
+                    Content="Rifle/Pistol"
+                    IsSelected="true"/>
+                <ComboBoxItem
+                    Content="Shotgun"/>
+                <ComboBoxItem
+                    Content="Fusion Rifle"/>
+
+            </ComboBox>
+            <TextBox
+                x:Name="TextBox_ReloadTime"
+                Grid.Column="1"
+                Grid.Row="0"
+                Height="30"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                Padding="10,0,0,0"/>
+            <TextBox
+                x:Name="TextBox_Rounds"
+                Grid.Column="1"
+                Grid.Row="1"
+                Height="30"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                Padding="10,0,0,0"/>
+            <TextBox
+                x:Name="TextBox_Bps"
+                Grid.Column="1"
+                Grid.Row="2"
+                Height="30"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center" 
+                Padding="10,0,0,0"/>
+            <TextBox
+                x:Name="TextBox_Dpb"
+                Grid.Column="1"
+                Grid.Row="3"
+                Height="30"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                Padding="10,0,0,0"/>
+            <TextBox
+                x:Name="TextBox_Dps"
+                Grid.Column="1"
+                Grid.Row="5"
+                Height="30"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                IsReadOnly="True"
+                VerticalContentAlignment="Center"
+                Padding="10,0,0,0"/>
+        </Grid>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1">
+            <Image
+                Source="Pistol.PNG"/>
+            <Button
+                x:Name="Help_Button"
+                Content="Help"
+                FontSize="30"
+                Height="50"
+                Width="200"
+                Margin="32"
+                Click="Help_Button_Click"/>
+            <Button
+                x:Name="Exit_Button"
+                Content="Exit"
+                Height="50"
+                Width="200"
+                FontSize="30"
+                Margin="3" 
+                Click="Exit_Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

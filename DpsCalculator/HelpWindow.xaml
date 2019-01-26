@@ -1,0 +1,207 @@
+﻿<Window x:Class="DpsCalculator.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DpsCalculator"
+        mc:Ignorable="d"
+        Title="HelpWindow" 
+        Height="450" 
+        Width="800"
+        Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="3"
+            Orientation="Vertical">
+            <Button
+                x:Name="Button_Exit"
+                Height="50"
+                Width="150"
+                Content="Exit"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,17,0,0"
+                Click="Button_Exit_Click"/>
+        </StackPanel>
+        <Image
+            Source="Reload.PNG"
+            Margin="10,10,10,10"/>
+        <Image
+            Grid.Column="1"
+            Source="Rounds.PNG"
+            Margin="10,10,10,10"/>
+        <Image
+            Grid.Column="2"
+            Source="Shooting.PNG"
+            Margin="10,10,10,10"/>
+        <Image
+            Grid.Column="3"
+            Source="Damage.PNG"
+            Margin="10,10,10,10"/>
+        <Label
+            Grid.Row="1"
+            Background="Black"
+            Foreground="White"
+            Height="30"
+            FontSize="15"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="For reload Speed, time"/>
+        <Label
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,40,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="how long it takes to"/>
+        <Label
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,70,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="reload your gun."/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            Background="Black"
+            Foreground="White"
+            Height="30"
+            FontSize="15"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="For rounds in magazine"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,40,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="input the number of"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,70,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="rounds your gun can"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,100,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="hold."/>
+        <Label
+            Grid.Column="2"
+            Grid.Row="1"
+            Background="Black"
+            Foreground="White"
+            Height="30"
+            FontSize="15"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="For bullets per second"/>
+        <Label
+            Grid.Column="2"
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,40,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="count the amount of"/>
+        <Label
+            Grid.Column="2"
+            Grid.Row="1"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Top"
+            Margin="10,70,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="rounds shot in a second."/>
+        
+        <Label
+            Grid.Column="3"
+            Grid.Row="1"
+            Background="Black"
+            Foreground="White"
+            Height="30"
+            FontSize="14"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="For damage per bullet"/>
+        <Label
+            Grid.Column="3"
+            Grid.Row="1"
+            Height="30"
+            FontSize="14"
+            VerticalAlignment="Top"
+            Margin="10,40,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="input the amount of"/>
+        <Label
+            Grid.Column="3"
+            Grid.Row="1"
+            Height="30"
+            FontSize="14"
+            VerticalAlignment="Top"
+            Margin="10,70,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="damage your gun hits for."/>
+        <Label
+            Grid.Column="3"
+            Grid.Row="1"
+            Height="30"
+            FontSize="14"
+            VerticalAlignment="Top"
+            Margin="10,100,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="Shotguns and fusion rifles"/>
+        <Label
+            Grid.Column="3"
+            Grid.Row="1"
+            Height="30"
+            FontSize="14"
+            VerticalAlignment="Top"
+            Margin="10,130,10,0"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Content="only input one damage #."/>
+    </Grid>
+</Window>
