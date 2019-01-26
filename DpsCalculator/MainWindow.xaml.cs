@@ -31,7 +31,7 @@ namespace DPSCalculator
         private void InitializeWindowElements()
         {
             _time = "Second";
-            UpdateTime();
+            UpdateTime(); 
         }
 
         private void UpdateTime()
